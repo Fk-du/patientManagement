@@ -1,8 +1,7 @@
-package com.example.paitient_service.controller;
+package com.example.patient_service.controller;
 
-import com.example.paitient_service.dto.PaitientResponseDTO;
-import com.example.paitient_service.service.PaitientService;
-import lombok.NoArgsConstructor;
+import com.example.patient_service.dto.PatientResponseDTO;
+import com.example.patient_service.service.PatientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,14 +13,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/patients")
 @RequiredArgsConstructor
-public class PaitientController {
-    private final PaitientService paitientService;
+public class PatientController {
+    private final PatientService patientService;
 
     @GetMapping
-    public ResponseEntity<List<PaitientResponseDTO>> getPatients(){
-        List<PaitientResponseDTO> paitientResponseDTOS = paitientService.getPatients();
+    public ResponseEntity<List<PatientResponseDTO>> getPatients(){
+        List<PatientResponseDTO> patientResponseDTOS = patientService.getPatients();
 
-        return ResponseEntity.ok().body(paitientResponseDTOS);
+        return ResponseEntity.ok().body(patientResponseDTOS);
     }
 
 

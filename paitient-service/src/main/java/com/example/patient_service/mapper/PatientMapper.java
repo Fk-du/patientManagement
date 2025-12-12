@@ -1,19 +1,19 @@
-package com.example.paitient_service.mapper;
+package com.example.patient_service.mapper;
 
-import com.example.paitient_service.dto.PaitientResponseDTO;
-import com.example.paitient_service.model.Patient;
+import com.example.patient_service.dto.PatientResponseDTO;
+import com.example.patient_service.model.Patient;
 
-public class PaitientMapper {
+public class PatientMapper {
 
-    public static PaitientResponseDTO toDto(Patient paitient){
-        PaitientResponseDTO paitientResponseDTO = new PaitientResponseDTO();
+    public static PatientResponseDTO toDto(Patient paitient){
+        PatientResponseDTO patientResponseDTO = new PatientResponseDTO();
 
-        paitientResponseDTO.setId(paitient.getId().toString());
-        paitientResponseDTO.setName(paitient.getName());
-        paitientResponseDTO.setEmail(paitient.getEmail());
-        paitientResponseDTO.setAddress(paitient.getAddress());
-        paitientResponseDTO.setDateOfBirth(paitient.getDateOfBirth().toString());
+        patientResponseDTO.setId(paitient.getId().toString());
+        patientResponseDTO.setName(paitient.getName());
+        patientResponseDTO.setEmail(paitient.getEmail());
+        patientResponseDTO.setAddress(paitient.getAddress());
+        patientResponseDTO.setDateOfBirth(paitient.getDateOfBirth().toString());
 
-        return paitientResponseDTO;
+        return patientResponseDTO;
     }
 }

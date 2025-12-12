@@ -1,10 +1,10 @@
-package com.example.paitient_service.service;
+package com.example.patient_service.service;
 
 
-import com.example.paitient_service.dto.PaitientResponseDTO;
-import com.example.paitient_service.mapper.PaitientMapper;
-import com.example.paitient_service.model.Patient;
-import com.example.paitient_service.repository.PatientRepository;
+import com.example.patient_service.dto.PatientResponseDTO;
+import com.example.patient_service.mapper.PatientMapper;
+import com.example.patient_service.model.Patient;
+import com.example.patient_service.repository.PatientRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,13 +12,13 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class PaitientService {
+public class PatientService {
     private final PatientRepository patientRepository;
 
-    public List<PaitientResponseDTO> getPatients(){
+    public List<PatientResponseDTO> getPatients(){
         List<Patient> patients = patientRepository.findAll();
 
         return patients.stream()
-                .map(PaitientMapper::toDto).toList();
+                .map(PatientMapper::toDto).toList();
     }
 }

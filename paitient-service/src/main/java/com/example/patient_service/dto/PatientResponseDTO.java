@@ -1,4 +1,4 @@
-package com.example.paitient_service.dto;
+package com.example.patient_service.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PaitientResponseDTO {
+public class PatientResponseDTO {
     private String id;
     private String name;
     private String email;
