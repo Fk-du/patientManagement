@@ -15,21 +15,20 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @NotNull
+    @NotNull(message = "name is required")
     private String name;
 
-    @NotNull
-    @Email
-    @Column(updatable = true)
+    @NotNull(message = "email is required")
+    @Email(message = "Email is required")
     private String email;
 
-    @NotNull
+    @NotNull(message = "address is required")
     private String address;
 
-    @NotNull
+    @NotNull(message = "date of Birth is required")
     private LocalDateTime dateOfBirth;
 
-    @NotNull
+    @NotNull(message = "registered date is required")
     private LocalDateTime registeredDate;
 
 }
