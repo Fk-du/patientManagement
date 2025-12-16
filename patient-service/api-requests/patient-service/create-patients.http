@@ -1,0 +1,4 @@
+### REGISTER PATIENT
+POST http://localhost:4000/patients
+
+###
