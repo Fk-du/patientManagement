@@ -35,6 +35,9 @@ public class PatientService {
         }
         Patient newPatient = patientRepository.save(PatientMapper.toModel(patient));
 
+        billingServiceGrpcClient.createBillingAccount(newPatient.getId().toString(),
+                newPatient.getName(), newPatient.getEmail());
+
         return PatientMapper.toDto(newPatient);
     }
 
